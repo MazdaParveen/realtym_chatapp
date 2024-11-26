@@ -1,0 +1,167 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("/pic1.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bodyContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 15px;
+    /* Add padding for smaller screens */
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    max-width: 100%;
+    /* Full width on smaller screens */
+    box-sizing: border-box;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    /* Center buttons on smaller screens */
+    gap: 10px;
+    flex-wrap: wrap;
+    /* Allow buttons to stack if necessary */
+}
+
+.button {
+    padding: 12px 20px;
+    background-image: linear-gradient(to right, #f32170, #ff5500);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    font-family: "Sofia", sans-serif;
+}
+
+#name {
+    background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+/* Phone container styles */
+.phone-container {
+    width: 100%;
+    max-width: 300px;
+    background-image: linear-gradient(to right, #0e0e0e, #343434);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 100px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* Ensure content stacks on smaller screens */
+}
+
+/* Chat room styles */
+.room-header {
+    color: #fff;
+    text-align: center;
+}
+
+.messages {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    max-height: 400px;
+    width: 100%;
+    /* Full width */
+    box-sizing: border-box;
+}
+
+.messages li {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    word-wrap: break-word;
+    /* Ensure long text wraps */
+}
+
+.messages li:nth-child(even) {
+    background-image: linear-gradient(to right, #007bff, #0056b3);
+    color: #fff;
+}
+
+.messages li:nth-child(odd) {
+    background-image: linear-gradient(to right, #ffffff, #f0f0f0);
+    color: #000;
+}
+
+/* Typing status */
+.typing-status {
+    color: #fff;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        /* Reduce width for tablets */
+    }
+
+    .phone-container {
+        margin-top: 50px;
+        width: 90%;
+        /* Full width with some padding */
+    }
+
+    .button-container {
+        gap: 5px;
+        /* Reduce gap between buttons */
+    }
+
+    .messages {
+        max-height: 300px;
+        /* Adjust height for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .phone-container {
+        margin-top: 20px;
+        padding: 15px;
+        /* Adjust padding for small screens */
+    }
+
+    .button {
+        font-size: 14px;
+        /* Smaller font for buttons */
+        padding: 10px 15px;
+        /* Adjust padding */
+    }
+
+    .messages {
+        max-height: 250px;
+        /* Further adjust height for smaller screens */
+    }
+}
